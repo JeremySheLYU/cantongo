@@ -1,0 +1,12 @@
+{
+  "name": "cantongo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A gentle, local-first Cantonese practice journal.",
+  "scripts": {
+    "test": "node --test *.test.js",
+    "dev": "python3 -m http.server 4174 --bind 127.0.0.1"
+  },
+  "devDependencies": { "fake-indexeddb": "6.2.6" }
+}

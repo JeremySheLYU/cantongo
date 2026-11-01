@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fcf8f2">
+  <meta name="description" content="A quiet place for your Cantonese. Log practice, collect phrases, and learn at your own pace. Record, don't judge.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CantonGo">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>CantonGo — A little Cantonese, at your pace.</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand" href="#today" aria-label="CantonGo home"><img src="./icon.svg" width="42" height="42" alt=""><span>CantonGo<span class="brand-caption">A LITTLE, AT YOUR PACE.</span></span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="today" aria-current="page"><span data-icon="sun"></span><span>Today</span></button>
+        <button class="nav-item" data-view="history"><span data-icon="calendar"></span><span>History</span></button>
+        <button class="nav-item" data-view="phrases"><span data-icon="book"></span><span>Phrases</span></button>
+        <button class="nav-item" data-view="settings"><span data-icon="settings"></span><span>Settings</span></button>
+      </nav>
+      <div class="sidebar-note"><span class="quiet-line"></span><p>A word. A conversation.<br>A little more your own.</p><span class="local-label"><span class="status-dot"></span>Saved on this device</span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span id="view-label">YOUR CANTONESE JOURNAL</span><span id="connection" class="connection" aria-live="polite"></span></header>
+      <div id="storage-error" role="alert" class="storage-error" hidden></div>
+      <main id="main" tabindex="-1"><div class="loading">Opening your Cantonese journal…</div></main>
+      <footer class="page-footer"><span>Record, don't judge.</span><span>Your words stay with you.</span></footer>
+    </div>
+  </div>
+  <dialog id="entry-dialog" class="sheet" aria-labelledby="entry-heading"></dialog>
+  <dialog id="confirm-dialog" class="confirm-dialog" aria-labelledby="confirm-heading"></dialog>
+  <dialog id="info-dialog" class="confirm-dialog" aria-labelledby="info-heading"></dialog>
+  <input type="file" id="restore-file" accept=".json,application/json" hidden>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
